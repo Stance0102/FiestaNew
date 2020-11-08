@@ -1,0 +1,6 @@
+framework module Pods_FiestaNew {
+  umbrella header "Pods-FiestaNew-umbrella.h"
+
+  export *
+  module * { export * }
+}

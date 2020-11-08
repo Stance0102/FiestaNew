@@ -1,0 +1,25 @@
+{
+  "object": {
+    "pins": [
+      {
+        "package": "AlertX",
+        "repositoryURL": "https://github.com/neel-makhecha/AlertX.git",
+        "state": {
+          "branch": null,
+          "revision": "7d074343b95c25614a52e06e9ae7034bf6a05300",
+          "version": "1.1.0"
+        }
+      },
+      {
+        "package": "PopupView",
+        "repositoryURL": "https://github.com/exyte/PopupView.git",
+        "state": {
+          "branch": null,
+          "revision": "fd37cca19583f784288dc3f1d22e9c5c69d6fd68",
+          "version": "0.0.10"
+        }
+      }
+    ]
+  },
+  "version": 1
+}

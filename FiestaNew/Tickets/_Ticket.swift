@@ -33,7 +33,7 @@ struct Unexpired_Activity {
 
 var Ticket_Alert: String = "購票前，請務必確認票種！"
 
-class Ticket: ObservableObject, Identifiable
+class Ticket: ObservableObject
 {
     @Published var Ticket_Array: [Ticket_Kinds] = []
     @Published var MyTicket_Array: [Unexpired_Activity] = []

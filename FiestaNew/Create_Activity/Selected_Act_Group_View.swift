@@ -7,11 +7,7 @@
 //
 
 import SwiftUI
-/*
-extension String: Identifiable {
-    public var id: String { self }
-}
-*/
+
 struct Selected_Act_Group_View: View {
     @ObservedObject var Group_Selected = Group_Cls()
     @State  var selectedIndex = 0

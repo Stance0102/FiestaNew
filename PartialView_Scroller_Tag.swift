@@ -22,7 +22,7 @@ struct PartialView_Scroller_Tag: View {
                             Tag_Manager.updateData(index, item)
                         }){
                             VStack {
-                                Image("Icon")
+                                Image("Logo")
                                 .resizable()
                                 .scaledToFill()
                                 .clipShape(Circle())

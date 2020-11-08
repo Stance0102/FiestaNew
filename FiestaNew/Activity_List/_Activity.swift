@@ -29,7 +29,7 @@ struct Activity_Info {
     //var Longitude: Float
 }
 
-class Activity: ObservableObject, Identifiable {
+class Activity: ObservableObject {
     @Published var ActivityInfoList: [Activity_Info] = []
     @Published var Act_ID_Array: [String] = []
     
@@ -60,72 +60,72 @@ class Activity: ObservableObject, Identifiable {
                     
                     if ErrorCode == "001"
                     {
-//                        for i in 0..<Result_Count {
-//                            let Act_ID = DataJSON!["result"][i]["Id"].string!
-//                            let Act_Name = DataJSON!["result"][i]["act_Name"].string!
-//                            let Act_Image = DataJSON!["result"][i]["Photo"].string!
-//                            let GroupID = DataJSON!["result"][i]["groupId"].string!
-//                            let Location = DataJSON!["result"][i]["Location"].string!
-//                            let StartTime = DataJSON!["result"][i]["startTime"].string!
-//                            let EndTime = DataJSON!["result"][i]["endTime"].string!
-//                            let Act_Description = DataJSON!["result"][i]["act_Description"].string!
-//                            var Act_Status: String
-//                            //let PeopleMaium: Int
-//                            //let Price: Int
-//                            //let ViewStatus: Bool
-//                            //let Latitude: Float
-//                            //let Longitude: Float
-//                            var Tag: String = ""
-//                            var Tags: [String] = []
-//                            var ReadTagCount_Tag: Int = 0
-//
-//                            self.Act_ID_Array.append(Act_ID)
-//
-//                            if DataJSON!["result"][i]["act_Status"].string == "1" {
-//                                Act_Status = "熱賣中"
-//                            }else{
-//                                Act_Status = "售鑿"
-//                            }
-//
-//                            for _ in 0..<DataJSON!["result"][i]["Tag"].count
-//                            {
-//                                if ReadTagCount_Tag == 0
-//                                {
-//                                    Tag = DataJSON!["result"][i]["Tag"][ReadTagCount_Tag].string!
-//                                }
-//                                else
-//                                {
-//                                    Tag += "、\(DataJSON!["result"][i]["Tag"][ReadTagCount_Tag].string!)"
-//                                }
-//                                ReadTagCount_Tag += 1
-//                            }
-//
-//                            for ReadTagCount_Tags in 0..<DataJSON!["result"][i]["Tag"].count
-//                            {
-//                                Tags.append(DataJSON!["result"][i]["Tag"][ReadTagCount_Tags].string!)
-//                            }
-//
-//                            self.ActivityInfoList.append(
-//                                Activity_Info(
-//                                    Act_ID: Act_ID,
-//                                    Act_Name: Act_Name,
-//                                    Act_Image: Act_Image,
-//                                    GroupID: GroupID,
-//                                    Tag: Tag,
-//                                    Tags: Tags,
-//                                    //PeopleMaium: DataJSON!["result"][i]["peopleMaxium"].int!,
-//                                    Location: Location,
-//                                    StartTime: StartTime,
-//                                    EndTime: EndTime,
-//                                    //Price: DataJSON!["result"][i]["Price"].int!,
-//                                    Act_Description: Act_Description,
-//                                    Act_Status: Act_Status
-//                                    //ViewStatus: DataJSON!["result"][i]["view_Status"].bool!,
-//                                    //Latitude: DataJSON!["result"][i]["Latitude"].float!,
-//                                    //Longitude: DataJSON!["result"][i]["Longitude"].float!
-//                                )
-//                            )
-//                        }
+                        for i in 0..<Result_Count {
+                            let Act_ID = DataJSON!["result"][i]["Id"].string!
+                            let Act_Name = DataJSON!["result"][i]["act_Name"].string!
+                            let Act_Image = DataJSON!["result"][i]["Photo"].string!
+                            let GroupID = DataJSON!["result"][i]["groupId"].string!
+                            let Location = DataJSON!["result"][i]["Location"].string!
+                            let StartTime = DataJSON!["result"][i]["startTime"].string!
+                            let EndTime = DataJSON!["result"][i]["endTime"].string!
+                            let Act_Description = DataJSON!["result"][i]["act_Description"].string!
+                            var Act_Status: String
+                            //let PeopleMaium: Int
+                            //let Price: Int
+                            //let ViewStatus: Bool
+                            //let Latitude: Float
+                            //let Longitude: Float
+                            var Tag: String = ""
+                            var Tags: [String] = []
+                            var ReadTagCount_Tag: Int = 0
+
+                            self.Act_ID_Array.append(Act_ID)
+
+                            if DataJSON!["result"][i]["act_Status"].string == "1" {
+                                Act_Status = "熱賣中"
+                            }else{
+                                Act_Status = "售鑿"
+                            }
+
+                            for _ in 0..<DataJSON!["result"][i]["Tag"].count
+                            {
+                                if ReadTagCount_Tag == 0
+                                {
+                                    Tag = DataJSON!["result"][i]["Tag"][ReadTagCount_Tag].string!
+                                }
+                                else
+                                {
+                                    Tag += "、\(DataJSON!["result"][i]["Tag"][ReadTagCount_Tag].string!)"
+                                }
+                                ReadTagCount_Tag += 1
+                            }
+
+                            for ReadTagCount_Tags in 0..<DataJSON!["result"][i]["Tag"].count
+                            {
+                                Tags.append(DataJSON!["result"][i]["Tag"][ReadTagCount_Tags].string!)
+                            }
+
+                            self.ActivityInfoList.append(
+                                Activity_Info(
+                                    Act_ID: Act_ID,
+                                    Act_Name: Act_Name,
+                                    Act_Image: Act_Image,
+                                    GroupID: GroupID,
+                                    Tag: Tag,
+                                    Tags: Tags,
+                                    //PeopleMaium: DataJSON!["result"][i]["peopleMaxium"].int!,
+                                    Location: Location,
+                                    StartTime: StartTime,
+                                    EndTime: EndTime,
+                                    //Price: DataJSON!["result"][i]["Price"].int!,
+                                    Act_Description: Act_Description,
+                                    Act_Status: Act_Status
+                                    //ViewStatus: DataJSON!["result"][i]["view_Status"].bool!,
+                                    //Latitude: DataJSON!["result"][i]["Latitude"].float!,
+                                    //Longitude: DataJSON!["result"][i]["Longitude"].float!
+                                )
+                            )
+                        }
                         UserDefaults.standard.set(self.Act_ID_Array, forKey: "Act_ID")
                     }
                     else if ErrorCode == "013"

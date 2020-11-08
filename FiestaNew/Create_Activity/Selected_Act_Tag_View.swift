@@ -9,7 +9,7 @@
 import SwiftUI
 
 struct Selected_Act_Tag_View: View {
-    @ObservedObject var tag_Manager = TagManager()
+    //@ObservedObject var tag_Manager = TagManager()
     @State var Selected_Group: String
     
     var body: some View {
